@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sudzekai.Hosting.WebHost.Abstractions\Sudzekai.Hosting.WebHost.Abstractions.csproj" />
+    <ProjectReference Include="..\Sudzekai.WebOs.Hosting.Abstractions\Sudzekai.Hosting.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

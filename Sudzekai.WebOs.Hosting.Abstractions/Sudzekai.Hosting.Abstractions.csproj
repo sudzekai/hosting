@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <PackageId>Sudzekai.Hosting.Abstractions</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Sudzekai</Authors>
+    <Description>Abstractions (contracts and DTOs) for the Sudzekai.Hosting application-hosting library: IHost, IHostBuilder, IHostServiceProvider, IHostedService, configuration contracts and service-registration contracts.</Description>
+    <PackageTags>hosting;di;dependency-injection;host;builder;configuration;aot</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/sudzekai/hosting</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sudzekai/hosting.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
