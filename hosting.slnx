@@ -1,12 +1,14 @@
 <Solution>
+  <Project Path="Sudzekai.Aot.DependencyInjection.Abstractions/Sudzekai.Aot.DependencyInjection.Abstractions.csproj" />
+  <Project Path="Sudzekai.Aot.DependencyInjection.Test/Sudzekai.Aot.DependencyInjection.Test.csproj" Id="c5b50020-9807-4d4a-a4b9-ee89aef48c49" />
+  <Project Path="Sudzekai.Aot.DependencyInjection/Sudzekai.Aot.DependencyInjection.csproj" Id="68bbef18-262b-471a-bea3-eef4facf8892" />
+  <Project Path="Sudzekai.Hosting.Abstractions/Sudzekai.Hosting.Abstractions.csproj" />
   <Project Path="Sudzekai.Hosting.Logging.Abstractions/Sudzekai.Hosting.Logging.Abstractions.csproj" Id="1ee969cc-ebf4-4901-9f86-60751732d79b" />
   <Project Path="Sudzekai.Hosting.Logging/Sudzekai.Hosting.Logging.csproj" Id="e531a272-ec58-4b6d-853f-8bd68dfaa55d" />
+  <Project Path="Sudzekai.Hosting.Plugin.Abstractions/Sudzekai.Hosting.Plugin.Abstractions.csproj" Id="e6088b9b-868f-44dc-8fb1-af01e5997397" />
+  <Project Path="Sudzekai.Hosting.Plugin/Sudzekai.Hosting.Plugin.csproj" Id="f1a6a42f-b60a-450e-b979-426c56f5fb29" />
   <Project Path="Sudzekai.Hosting.Types/Sudzekai.Hosting.Types.csproj" Id="1c92280b-e07e-485f-ac5e-bb681ea0a413" />
   <Project Path="Sudzekai.Hosting.WebHost.Abstractions/Sudzekai.Hosting.WebHost.Abstractions.csproj" Id="d76b31f0-64f5-4514-bd80-3eb04e8d2560" />
   <Project Path="Sudzekai.Hosting.WebHost/Sudzekai.Hosting.WebHost.csproj" Id="1992adc0-197a-495c-9e3c-cf2768487cb1" />
-  <Project Path="Sudzekai.WebOs.Hosting.Abstractions/Sudzekai.Hosting.Abstractions.csproj" />
-  <Project Path="Sudzekai.WebOs.Hosting.Plugin.Abstractions/Sudzekai.Hosting.Plugin.Abstractions.csproj" Id="e6088b9b-868f-44dc-8fb1-af01e5997397" />
-  <Project Path="Sudzekai.WebOs.Hosting.Plugin/Sudzekai.Hosting.Plugin.csproj" Id="f1a6a42f-b60a-450e-b979-426c56f5fb29" />
-  <Project Path="Sudzekai.WebOs.Hosting/Sudzekai.Hosting.csproj" />
-  <Project Path="Tests/Tests.csproj" Id="3fa94f64-2ecf-486d-ba82-ffa01ca7b289" />
+  <Project Path="Sudzekai.Hosting/Sudzekai.Hosting.csproj" />
 </Solution>

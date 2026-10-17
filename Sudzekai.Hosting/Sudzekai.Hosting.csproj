@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sudzekai.WebOs.Hosting.Abstractions\Sudzekai.Hosting.Abstractions.csproj" />
+    <ProjectReference Include="..\Sudzekai.Hosting.Abstractions\Sudzekai.Hosting.Abstractions.csproj" />
     <ProjectReference Include="..\Sudzekai.Hosting.Types\Sudzekai.Hosting.Types.csproj" />
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>

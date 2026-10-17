@@ -13,10 +13,10 @@
     <ProjectReference Include="..\Sudzekai.Hosting.Types\Sudzekai.Hosting.Types.csproj" />
     <ProjectReference Include="..\Sudzekai.Hosting.WebHost.Abstractions\Sudzekai.Hosting.WebHost.Abstractions.csproj" />
     <ProjectReference Include="..\Sudzekai.Hosting.WebHost\Sudzekai.Hosting.WebHost.csproj" />
-    <ProjectReference Include="..\Sudzekai.WebOs.Hosting.Abstractions\Sudzekai.Hosting.Abstractions.csproj" />
-    <ProjectReference Include="..\Sudzekai.WebOs.Hosting.Plugin.Abstractions\Sudzekai.Hosting.Plugin.Abstractions.csproj" />
-    <ProjectReference Include="..\Sudzekai.WebOs.Hosting.Plugin\Sudzekai.Hosting.Plugin.csproj" />
-    <ProjectReference Include="..\Sudzekai.WebOs.Hosting\Sudzekai.Hosting.csproj" />
+    <ProjectReference Include="..\Sudzekai.Hosting.Abstractions\Sudzekai.Hosting.Abstractions.csproj" />
+    <ProjectReference Include="..\Sudzekai.Hosting.Plugin.Abstractions\Sudzekai.Hosting.Plugin.Abstractions.csproj" />
+    <ProjectReference Include="..\Sudzekai.Hosting.Plugin\Sudzekai.Hosting.Plugin.csproj" />
+    <ProjectReference Include="..\Sudzekai.Hosting\Sudzekai.Hosting.csproj" />
   </ItemGroup>
 
   <ItemGroup>

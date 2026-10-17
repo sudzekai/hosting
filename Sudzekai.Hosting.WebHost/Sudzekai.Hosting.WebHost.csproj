@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Builders\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sudzekai.Hosting.Abstractions\Sudzekai.Hosting.Abstractions.csproj" />
+    <ProjectReference Include="..\Sudzekai.Hosting.Types\Sudzekai.Hosting.Types.csproj" />
+    <ProjectReference Include="..\Sudzekai.Hosting.WebHost.Abstractions\Sudzekai.Hosting.WebHost.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
