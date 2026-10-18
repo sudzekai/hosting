@@ -54,22 +54,7 @@ namespace Sudzekai.Aot.DependencyInjection
             ArgumentNullException.ThrowIfNull(serviceKey, nameof(serviceKey));
             ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
 
-            var descriptor = ServiceDescriptor.KeyedScoped(typeof(T), serviceKey, implementationFactory);
-
-            services.Add(descriptor);
-
-            return services;
-        }
-
-        public static IServiceCollection AddKeyedScoped<TService, TImplementation>(this IServiceCollection services, object serviceKey, Func<IServiceProvider, TService> implementationFactory)
-            where TService : class
-            where TImplementation : class, TService
-        {
-            ArgumentNullException.ThrowIfNull(services, nameof(services));
-            ArgumentNullException.ThrowIfNull(serviceKey, nameof(serviceKey));
-            ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
-
-            var descriptor = ServiceDescriptor.KeyedScoped(typeof(TService), serviceKey, implementationFactory);
+            var descriptor = ServiceDescriptor.KeyedScoped<T>(serviceKey, implementationFactory);
 
             services.Add(descriptor);
 
@@ -100,21 +85,6 @@ namespace Sudzekai.Aot.DependencyInjection
             ArgumentNullException.ThrowIfNull(instance, nameof(instance));
 
             var desriptor = ServiceDescriptor.KeyedSingleton<T>(serviceKey, instance);
-
-            services.Add(desriptor);
-
-            return services;
-        }
-
-        public static IServiceCollection AddKeyedSingleton<TService, TImplementation>(this IServiceCollection services, object serviceKey, TService instance)
-            where TService : class
-            where TImplementation : class, TService
-        {
-            ArgumentNullException.ThrowIfNull(services, nameof(services));
-            ArgumentNullException.ThrowIfNull(serviceKey, nameof(serviceKey));
-            ArgumentNullException.ThrowIfNull(instance, nameof(instance));
-
-            var desriptor = ServiceDescriptor.KeyedSingleton<TService>(serviceKey, instance);
 
             services.Add(desriptor);
 
@@ -176,21 +146,6 @@ namespace Sudzekai.Aot.DependencyInjection
             return services;
         }
 
-        public static IServiceCollection AddKeyedSingleton<TService, TImplementation>(this IServiceCollection services, object serviceKey, Func<IServiceProvider, TService> implementationFactory)
-            where TService : class
-            where TImplementation : class, TService
-        {
-            ArgumentNullException.ThrowIfNull(services, nameof(services));
-            ArgumentNullException.ThrowIfNull(serviceKey, nameof(serviceKey));
-            ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
-
-            var descriptor = ServiceDescriptor.KeyedSingleton(typeof(TService), serviceKey, implementationFactory);
-
-            services.Add(descriptor);
-
-            return services;
-        }
-
         // transiet
 
         public static IServiceCollection AddKeyedTransiet(this IServiceCollection services, Type serviceType, object serviceKey, Func<IServiceProvider, object> implementationFactory)
@@ -242,21 +197,6 @@ namespace Sudzekai.Aot.DependencyInjection
             ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
 
             var descriptor = ServiceDescriptor.KeyedTransiet(typeof(T), serviceKey, implementationFactory);
-
-            services.Add(descriptor);
-
-            return services;
-        }
-
-        public static IServiceCollection AddKeyedTransiet<TService, TImplementation>(this IServiceCollection services, object serviceKey, Func<IServiceProvider, TService> implementationFactory)
-            where TService : class
-            where TImplementation : class, TService
-        {
-            ArgumentNullException.ThrowIfNull(services, nameof(services));
-            ArgumentNullException.ThrowIfNull(serviceKey, nameof(serviceKey));
-            ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
-
-            var descriptor = ServiceDescriptor.KeyedTransiet(typeof(TService), serviceKey, implementationFactory);
 
             services.Add(descriptor);
 

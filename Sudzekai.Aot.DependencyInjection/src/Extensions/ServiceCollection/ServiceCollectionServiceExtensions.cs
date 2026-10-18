@@ -50,21 +50,7 @@ namespace Sudzekai.Aot.DependencyInjection
             ArgumentNullException.ThrowIfNull(services, nameof(services));
             ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
 
-            var descriptor = ServiceDescriptor.Scoped(typeof(T), implementationFactory);
-
-            services.Add(descriptor);
-
-            return services;
-        }
-
-        public static IServiceCollection AddScoped<TService, TImplementation>(this IServiceCollection services, Func<IServiceProvider, TService> implementationFactory)
-            where TService : class
-            where TImplementation : class, TService
-        {
-            ArgumentNullException.ThrowIfNull(services, nameof(services));
-            ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
-
-            var descriptor = ServiceDescriptor.Scoped(typeof(TService), implementationFactory);
+            var descriptor = ServiceDescriptor.Scoped<T>(implementationFactory);
 
             services.Add(descriptor);
 
@@ -93,20 +79,6 @@ namespace Sudzekai.Aot.DependencyInjection
             ArgumentNullException.ThrowIfNull(instance, nameof(instance));
 
             var desriptor = ServiceDescriptor.Singleton<T>(instance);
-
-            services.Add(desriptor);
-
-            return services;
-        }
-
-        public static IServiceCollection AddSingleton<TService, TImplementation>(this IServiceCollection services, TService instance)
-            where TService : class
-            where TImplementation : class, TService
-        {
-            ArgumentNullException.ThrowIfNull(services, nameof(services));
-            ArgumentNullException.ThrowIfNull(instance, nameof(instance));
-
-            var desriptor = ServiceDescriptor.Singleton<TService>(instance);
 
             services.Add(desriptor);
 
@@ -158,20 +130,6 @@ namespace Sudzekai.Aot.DependencyInjection
             ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
 
             var descriptor = ServiceDescriptor.Singleton(typeof(T), implementationFactory);
-
-            services.Add(descriptor);
-
-            return services;
-        }
-
-        public static IServiceCollection AddSingleton<TService, TImplementation>(this IServiceCollection services, Func<IServiceProvider, TService> implementationFactory)
-            where TService : class
-            where TImplementation : class, TService
-        {
-            ArgumentNullException.ThrowIfNull(services, nameof(services));
-            ArgumentNullException.ThrowIfNull(implementationFactory, nameof(implementationFactory));
-
-            var descriptor = ServiceDescriptor.Singleton(typeof(TService), implementationFactory);
 
             services.Add(descriptor);
 

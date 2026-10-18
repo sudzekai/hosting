@@ -59,9 +59,13 @@
             where TService : class, IService<TService>
             => Singleton(typeof(TService), TService.New);
 
-        public static ServiceDescriptor Singleton<TService>(object instance)
+        public static ServiceDescriptor Singleton<TService>(TService instance)
             where TService : class
             => Singleton(typeof(TService), instance);
+
+        public static ServiceDescriptor Singleton<TService>(Func<IServiceProvider, TService> implementationFactory)
+            where TService : class
+            => Singleton(typeof(TService), implementationFactory);
 
         public static ServiceDescriptor KeyedSingleton(Type serviceType, object serviceKey, Func<IServiceProvider, object> implementationFactory)
         {
@@ -85,9 +89,13 @@
             where TService : class, IService<TService>
             => KeyedSingleton(typeof(TService), serviceKey, TService.New);
 
-        public static ServiceDescriptor KeyedSingleton<TService>(object serviceKey, object instance)
+        public static ServiceDescriptor KeyedSingleton<TService>(object serviceKey, TService instance)
             where TService : class
             => KeyedSingleton(typeof(TService), serviceKey, instance);
+
+        public static ServiceDescriptor KeyedSingleton<TService>(object serviceKey, Func<IServiceProvider, TService> implementationFactory)
+            where TService : class
+            => KeyedSingleton(typeof(TService), serviceKey, implementationFactory);
 
         // scoped
 
@@ -103,6 +111,10 @@
             where TService : class, IService<TService>
             => Scoped(typeof(TService), TService.New);
 
+        public static ServiceDescriptor Scoped<TService>(Func<IServiceProvider, TService> implementationFactory)
+            where TService : class
+            => Scoped(typeof(TService), implementationFactory);
+
         public static ServiceDescriptor KeyedScoped(Type serviceType, object serviceKey, Func<IServiceProvider, object> implementationFactory)
         {
             ArgumentNullException.ThrowIfNull(serviceType, nameof(serviceType));
@@ -115,6 +127,10 @@
         public static ServiceDescriptor KeyedScoped<TService>(object serviceKey)
             where TService : class, IService<TService>
             => KeyedScoped(typeof(TService), serviceKey, TService.New);
+
+        public static ServiceDescriptor KeyedScoped<TService>(object serviceKey, Func<IServiceProvider, TService> implementationFactory)
+            where TService : class
+            => KeyedScoped(typeof(TService), serviceKey, implementationFactory);
 
         // transiet
 
@@ -130,6 +146,10 @@
             where TService : class, IService<TService>
             => Transiet(typeof(TService), TService.New);
 
+        public static ServiceDescriptor Transiet<TService>(Func<IServiceProvider, TService> implementationFactory)
+            where TService : class
+            => Transiet(typeof(TService), implementationFactory);
+
         public static ServiceDescriptor KeyedTransiet(Type serviceType, object serviceKey, Func<IServiceProvider, object> implementationFactory)
         {
             ArgumentNullException.ThrowIfNull(serviceType, nameof(serviceType));
@@ -142,5 +162,9 @@
         public static ServiceDescriptor KeyedTransiet<TService>(object serviceKey)
             where TService : class, IService<TService>
             => KeyedTransiet(typeof(TService), serviceKey, TService.New);
+
+        public static ServiceDescriptor KeyedTransiet<TService>(object serviceKey, Func<IServiceProvider, TService> implementationFactory)
+            where TService : class
+            => KeyedTransiet(typeof(TService), serviceKey, implementationFactory);
     }
 }
